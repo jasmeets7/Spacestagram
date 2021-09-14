@@ -1,5 +1,5 @@
 # Spacestagram
-- [Deployed App] 
+- [Deployed App] (https://spacestagram-js.herokuapp.com/)
 - [Link to repo] (https://github.com/jasmeets7/Spacestagram.git)
 
 ---
