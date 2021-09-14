@@ -1,0 +1,42 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    padding: 1rem;
+    background: #FFF;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+nav > .logo > h4 > a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+input[type="date"] {
+    font-size: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 614px) {
+    nav{
+        position: unset;
+    }
+}
