@@ -1,0 +1,161 @@
+.card {
+    width: 614px;
+    margin: auto;
+    padding: 1rem;
+    background: #FFF;
+    border: 1px solid #dbdbdb;
+    margin-top: 24px;
+    padding-bottom: 0;
+}
+
+.card:first-child {
+    margin-top: 5rem;
+}
+
+.card:last-child {
+    margin-bottom: 1rem;
+}
+
+.card__title {
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card__image > img {
+    max-width: 614px;
+    width: 100%;
+}
+
+.card__explanation {
+    text-align: justify;
+}
+
+.card__date__share {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.card__date{
+    color: #8e8e8e;
+    padding: 10px 0;
+}
+
+.card__date__share > button {
+    background: #fafafa;
+    border: 1px solid #8e8e8e;
+    border-radius: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8e8e8e;
+    height: 100%;
+    max-height: 27px;
+    align-self: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.card__date__share > button:hover {
+    background: #8e8e8e;
+    color: #fafafa;
+}
+
+.card__like__button{
+    position: relative;
+    height: 100px;
+}
+
+.card__like__button > label > input[type='checkbox']{
+    display: none;
+}
+
+.card__like__button > label  > input[type='checkbox'] + .like::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: url("../../../../public/heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.card__like__button > label > input[type='checkbox']:checked + .like::before{
+    content: '';
+    transition-duration: 1s;
+    background-position: -2800px 0;
+}
+
+.card__link{
+    display: grid;
+    grid-template-columns: 79% 19%;
+    gap: 2%;
+    padding-bottom: 10px;
+    transition: all 2s ease-in-out;
+}
+
+.card__link > input[type="text"]{
+    text-align: center;
+    padding: 7px;
+    background: #8e8e8e;
+    border: 0;
+    border-radius: 5px;
+    color: #fafafa;
+}
+
+.card__link > button {
+    background: #fafafa;
+    border: 1px solid #8e8e8e;
+    border-radius: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8e8e8e;
+    height: 100%;
+    max-height: 27px;
+    align-self: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.card__link > button:hover {
+    background: #8e8e8e;
+    color: #fafafa;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.20, 1.20, 1.20);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+  
+.pulse {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+}
+
+.loading__ripple{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 614px) {
+    .card {
+        width: auto;
+        margin: 10px;
+    }
+
+    .card:first-child {
+        margin-top: 1rem;
+    }
+}

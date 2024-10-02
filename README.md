@@ -1,27 +1,67 @@
 # Spacestagram
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+Spacestagram is a web application that showcases stunning images from space using the NASA API. This project is built with Angular, providing a seamless and interactive user experience.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Fetches and displays images from NASA's API
+- Interactive and responsive design
+- Allows users to like and share images
+- Detailed view for each image with additional information
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- TypeScript
+- HTML
+- CSS
+- JavaScript
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run this project locally, follow these steps:
 
-## Running unit tests
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/jasmeets7/Spacestagram.git
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Navigate to the project directory:
+    ```sh
+    cd Spacestagram
+    ```
 
-## Running end-to-end tests
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Run the application:
+    ```sh
+    ng serve
+    ```
 
-## Further help
+5. Open your browser and navigate to `http://localhost:4200/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Usage
+
+Upon launching the application, you will be presented with a gallery of space images fetched from NASA's API. You can click on any image to view it in detail, like it, and share it with others.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or improvements, please create a pull request or open an issue.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [NASA API](https://api.nasa.gov/)
+- [Angular](https://angular.io/)
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- GitHub: [jasmeets7](https://github.com/jasmeets7)
