@@ -1,11 +1,8 @@
 const Dotenv = require('dotenv-webpack');
-
-console.log('Loading environment variables from .env file...');
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   plugins: [
-    new Dotenv({
-      path: '.env'
-    }),
+    ...(!isProd ? [new Dotenv({ path: './.env' })] : []),
   ],
 };
