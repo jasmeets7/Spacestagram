@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { provideHttpClient } from '@angular/common/http';
     SharedModule,
     BrowserAnimationsModule,
   ],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(withXhr())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

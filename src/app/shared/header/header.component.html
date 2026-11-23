@@ -3,6 +3,6 @@
         <h4><a href="{{url}}">spacestagram</a></h4>
     </div>
     <div class="nav-links">
-        <input (change)="onDateChange($event)" type="date" />
+        <input (change)="onDateChange($event)" type="date" min="1995-06-16" [max]="today" />
     </div>
 </nav>

@@ -22,7 +22,7 @@
     font-size: 1.25rem;
 }
 
-.card__image > img {
+.card__image img {
     max-width: 614px;
     width: 100%;
 }
@@ -158,4 +158,15 @@
     .card:first-child {
         margin-top: 1rem;
     }
+}
+.card__video {
+    display: block;
+    padding-top: 6px;
+    color: #8e8e8e;
+}
+
+.card__credit {
+    padding-top: 10px;
+    color: #8e8e8e;
+    font-size: 0.85rem;
 }

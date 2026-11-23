@@ -1,28 +1,42 @@
-<div class="loading__ripple" *ngIf="loading">
+@if (loading) {
+  <div class="loading__ripple">
     <loading></loading>
-</div>
-<ng-template *ngIf="!loading" ngFor let-data [ngForOf]="receivedData" let-i="index" >
+  </div>
+}
+@if (!loading) {
+  @for (data of receivedData; track data.date) {
     <div class="card">
-        <div class="card__title">{{data.title}}</div>
-        <div class="card__image">
-            <img [src]="data.url" />
+      <div class="card__title">{{data.title}}</div>
+      <div class="card__image">
+        <a [href]="data.articleUrl" target="_blank" rel="noopener">
+          <img [src]="data.imageUrl" [alt]="data.alt" loading="lazy" />
+        </a>
+        @if (data.mediaType === 'video') {
+          <a class="card__video" [href]="data.articleUrl" target="_blank" rel="noopener">▶ Watch the video on NASA</a>
+        }
+      </div>
+      <div class="card__date__share">
+        <div class="card__date">
+          {{data.date | date:"MMM d, y" }}
         </div>
-        <div class="card__date__share">
-            <div class="card__date">
-                {{data.date | date:"MMM d, y" }}
-            </div>
-            <button (click)="onShare()">Share</button>
+        <button (click)="onShare()">Share</button>
+      </div>
+      @if (share) {
+        <div class="card__link">
+          <input type="text" #urlField value="{{url}}{{data.date}}" readonly />
+          <button (click)="onCopy(urlField)">Copy</button>
         </div>
-        <div *ngIf="share" class="card__link">
-            <input type="text" #urlField value="{{url}}{{data.date}}" readonly />
-            <button (click)="onCopy(urlField)">Copy</button>
-        </div>
-        <div class="card__explanation">{{data.explanation}}</div>
-        <div class="card__like__button">
-            <label>
-                <input type="checkbox" [checked]="data.liked" >
-                <span class="like"></span>
-            </label>
-        </div>
+      }
+      <div class="card__explanation" [innerHTML]="data.explanation"></div>
+      @if (data.credit) {
+        <div class="card__credit">Credit: <span [innerHTML]="data.credit"></span></div>
+      }
+      <div class="card__like__button">
+        <label>
+          <input type="checkbox" [checked]="data.liked" >
+          <span class="like"></span>
+        </label>
+      </div>
     </div>
-</ng-template>
+  }
+}
